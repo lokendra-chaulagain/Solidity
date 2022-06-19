@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "age",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newage",
+						"type": "uint256"
+					}
+				],
+				"name": "lokiSetter",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"4functions.sol": "local1"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"4functions.sol": {
+			"keccak256": "0xb23c107bbfc85a984db43f237b9e83e0122b4578d4be3e6bf3eae9e78289f94e",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://97cf63c3190a4e217c9a517313f171d5c007bb6b4ed6f118dfe8711e5d4219a1",
+				"dweb:/ipfs/QmVXQGgSa2sJC6EFVQSsQ5rqzzm1eo3xxGyCA8X9miJcdR"
+			]
+		}
+	},
+	"version": 1
+}
