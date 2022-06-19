@@ -1,80 +1,44 @@
 {
 	"compiler": {
-		"version": "0.5.0+commit.1d4f565a"
+		"version": "0.8.7+commit.e28d00a7"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
-				"constant": true,
 				"inputs": [],
-				"name": "length",
+				"name": "value",
 				"outputs": [
 					{
+						"internalType": "bool",
 						"name": "",
-						"type": "uint256"
+						"type": "bool"
 					}
 				],
-				"payable": false,
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"constant": false,
-				"inputs": [
-					{
-						"name": "item",
-						"type": "uint256"
-					}
-				],
-				"name": "pushElement",
-				"outputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"constant": false,
-				"inputs": [],
-				"name": "popElement",
-				"outputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"constant": true,
-				"inputs": [
-					{
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "myArray",
-				"outputs": [
-					{
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			}
 		],
 		"devdoc": {
-			"methods": {}
+			"kind": "dev",
+			"methods": {},
+			"version": 1
 		},
 		"userdoc": {
-			"methods": {}
+			"kind": "user",
+			"methods": {},
+			"version": 1
 		}
 	},
 	"settings": {
 		"compilationTarget": {
-			"9Array.sol": "Array"
+			"13.boolean.sol": "Array"
 		},
-		"evmVersion": "byzantium",
+		"evmVersion": "london",
 		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
 		"optimizer": {
 			"enabled": false,
 			"runs": 200
@@ -82,10 +46,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"9Array.sol": {
-			"keccak256": "0x62fd1dc92ba5ebd64e1be9596e06f4e91a321fb65397506420e5b88bf588d0ef",
+		"13.boolean.sol": {
+			"keccak256": "0x1fbac315fdbb84fa8b4851731da37fabb23de9532f89a02120baa77c55c28ddc",
+			"license": "GPL-3.0",
 			"urls": [
-				"bzzr://33a9d70fbd4cf6b49cf30b47256637ab6c0d114ce69ee0e14162b0ed1f51abe8"
+				"bzz-raw://8fe5bdebfae3e1d0d8bc7746a4bf32a54573db0feda3209ad8e7b25171adac25",
+				"dweb:/ipfs/QmWke5dg8wiMKH4M8S7ciRhh9ictGrFNwHaCb3Xme68gBP"
 			]
 		}
 	},

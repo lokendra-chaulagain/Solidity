@@ -7,28 +7,15 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "age",
+				"name": "store1",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "string",
 						"name": "",
-						"type": "uint256"
+						"type": "string"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "newage",
-						"type": "uint256"
-					}
-				],
-				"name": "lokiSetter",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "pure",
 				"type": "function"
 			}
 		],
@@ -45,7 +32,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"4functions.sol": "local1"
+			"3localVariable.sol": "local1"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -59,12 +46,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"4functions.sol": {
-			"keccak256": "0xb23c107bbfc85a984db43f237b9e83e0122b4578d4be3e6bf3eae9e78289f94e",
+		"3localVariable.sol": {
+			"keccak256": "0x864a1cfd5dae854dcac5f4e628c60892b1c02c4c103f4fc868242ef4cbd5abaa",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://97cf63c3190a4e217c9a517313f171d5c007bb6b4ed6f118dfe8711e5d4219a1",
-				"dweb:/ipfs/QmVXQGgSa2sJC6EFVQSsQ5rqzzm1eo3xxGyCA8X9miJcdR"
+				"bzz-raw://3236b19cd845c90b1cd6b63e2a87f919ace52c7da2539e012aa0d6d76181f6aa",
+				"dweb:/ipfs/QmccXzANzUuYCzVaS3HiYhXWqEwpkBHwFweZ256MbigHrM"
 			]
 		}
 	},
