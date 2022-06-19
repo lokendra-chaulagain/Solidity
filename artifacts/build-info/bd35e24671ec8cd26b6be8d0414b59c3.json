@@ -1,0 +1,71 @@
+{
+	"id": "bd35e24671ec8cd26b6be8d0414b59c3",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"5viewAndPure.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0\r\npragma solidity >=0.5.0 <0.9.0;\r\n\r\n\r\n//View vs Pure\r\n//(siimilarities)--->view and pure are used when we are not changing state variable\r\n//pure is used only when read and write both are not happening of state variable\r\n//In view read in allowed but write is not allowed\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n//Possible (view)\r\n//  contract local {\r\n//     uint age=20;\r\n\r\n// //getter function\r\n//     function lokiGetter() public view returns(uint){\r\n//         return age;\r\n//     }\r\n// }\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n// Not Possible (pure)\r\n//  contract local {\r\n//     uint age=20;\r\n\r\n// //getter function\r\n//     function lokiGetter() public pure returns(uint){\r\n//         return age;\r\n//     }\r\n// }\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n//Here we can use pure cause we neither reading oor writiing\r\n//   contract local {\r\n//     uint public age=20;\r\n\r\n// //getter function\r\n//     function lokiGetter() public pure returns(uint){\r\n//         uint roll=200;\r\n//         return roll;\r\n//     }\r\n// }\r\n\r\n\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"sources": {
+			"5viewAndPure.sol": {
+				"ast": {
+					"absolutePath": "5viewAndPure.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.5",
+								".0",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "37:31:0"
+						}
+					],
+					"src": "37:951:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
