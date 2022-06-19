@@ -1,0 +1,67 @@
+{
+	"id": "0ff5b13aa62a3849e42e12cfbf17ccc4",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.5.0",
+	"solcLongVersion": "0.5.0+commit.1d4f565a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"8overflowUnderFlow.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0\r\npragma solidity 0.5.0;\r\n\r\n\r\n//PROBLEMS DUE TO INTEGER OVERFLOW\r\n//In 2018 Batch overflow and proxy overflow was the critical problems in ERC20 token due to integer overflow\r\n//which causes ether transfer with no account record\r\n\r\n//This problems was in 0.5.0 version lets use\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {},
+		"sources": {
+			"8overflowUnderFlow.sol": {
+				"ast": {
+					"absolutePath": "8overflowUnderFlow.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"0.5",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "37:22:0"
+						}
+					],
+					"src": "37:277:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

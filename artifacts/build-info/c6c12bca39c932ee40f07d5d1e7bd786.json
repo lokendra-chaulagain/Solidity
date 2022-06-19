@@ -1,0 +1,435 @@
+{
+	"id": "c6c12bca39c932ee40f07d5d1e7bd786",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.5.0",
+	"solcLongVersion": "0.5.0+commit.1d4f565a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"8overflowUnderFlow.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0\r\npragma solidity 0.5.0;\r\n\r\n\r\n//PROBLEMS DUE TO INTEGER OVERFLOW\r\n//In 2018 Batch overflow and proxy overflow was the critical problems in ERC20 token due to integer overflow\r\n//which causes ether transfer with no account record\r\n\r\n//This problems was in 0.5.0 version lets use\r\n\r\n\r\n//uint8 = 0 to 255\r\ncontract local{\r\n    uint8 money=255;\r\n}\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"8overflowUnderFlow.sol": {
+				"local": {
+					"abi": [],
+					"devdoc": {
+						"methods": {}
+					},
+					"evm": {
+						"assembly": "    /* \"8overflowUnderFlow.sol\":338:378  contract local{\r... */\n  mstore(0x40, 0x80)\n    /* \"8overflowUnderFlow.sol\":371:374  255 */\n  0xff\n    /* \"8overflowUnderFlow.sol\":359:374  uint8 money=255 */\n  0x0\n  dup1\n  0x100\n  exp\n  dup2\n  sload\n  dup2\n  0xff\n  mul\n  not\n  and\n  swap1\n  dup4\n  0xff\n  and\n  mul\n  or\n  swap1\n  sstore\n  pop\n    /* \"8overflowUnderFlow.sol\":338:378  contract local{\r... */\n  callvalue\n    /* \"--CODEGEN--\":8:17   */\n  dup1\n    /* \"--CODEGEN--\":5:7   */\n  iszero\n  tag_1\n  jumpi\n    /* \"--CODEGEN--\":30:31   */\n  0x0\n    /* \"--CODEGEN--\":27:28   */\n  dup1\n    /* \"--CODEGEN--\":20:32   */\n  revert\n    /* \"--CODEGEN--\":5:7   */\ntag_1:\n    /* \"8overflowUnderFlow.sol\":338:378  contract local{\r... */\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x0\n  codecopy\n  0x0\n  return\nstop\n\nsub_0: assembly {\n        /* \"8overflowUnderFlow.sol\":338:378  contract local{\r... */\n      mstore(0x40, 0x80)\n      0x0\n      dup1\n      revert\n\n    auxdata: 0xa165627a7a72305820193f5af391f9f259d629b59b7b15d89ef2b0b8deebb4dedda73c665297a13d0c0029\n}\n",
+						"bytecode": {
+							"linkReferences": {},
+							"object": "608060405260ff6000806101000a81548160ff021916908360ff160217905550348015602a57600080fd5b5060358060386000396000f3fe6080604052600080fdfea165627a7a72305820193f5af391f9f259d629b59b7b15d89ef2b0b8deebb4dedda73c665297a13d0c0029",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0xFF PUSH1 0x0 DUP1 PUSH2 0x100 EXP DUP2 SLOAD DUP2 PUSH1 0xFF MUL NOT AND SWAP1 DUP4 PUSH1 0xFF AND MUL OR SWAP1 SSTORE POP CALLVALUE DUP1 ISZERO PUSH1 0x2A JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x35 DUP1 PUSH1 0x38 PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG1 PUSH6 0x627A7A723058 KECCAK256 NOT EXTCODEHASH GAS RETURN SWAP2 0xf9 CALLCODE MSIZE 0xd6 0x29 0xb5 SWAP12 PUSH28 0x15D89EF2B0B8DEEBB4DEDDA73C665297A13D0C002900000000000000 ",
+							"sourceMap": "338:40:0:-;;;371:3;359:15;;;;;;;;;;;;;;;;;;;;338:40;8:9:-1;5:2;;;30:1;27;20:12;5:2;338:40:0;;;;;;;"
+						},
+						"deployedBytecode": {
+							"linkReferences": {},
+							"object": "6080604052600080fdfea165627a7a72305820193f5af391f9f259d629b59b7b15d89ef2b0b8deebb4dedda73c665297a13d0c0029",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG1 PUSH6 0x627A7A723058 KECCAK256 NOT EXTCODEHASH GAS RETURN SWAP2 0xf9 CALLCODE MSIZE 0xd6 0x29 0xb5 SWAP12 PUSH28 0x15D89EF2B0B8DEEBB4DEDDA73C665297A13D0C002900000000000000 ",
+							"sourceMap": "338:40:0:-;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "10600",
+								"executionCost": "20333",
+								"totalCost": "30933"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 338,
+									"end": 378,
+									"name": "PUSH",
+									"value": "80"
+								},
+								{
+									"begin": 338,
+									"end": 378,
+									"name": "PUSH",
+									"value": "40"
+								},
+								{
+									"begin": 338,
+									"end": 378,
+									"name": "MSTORE"
+								},
+								{
+									"begin": 371,
+									"end": 374,
+									"name": "PUSH",
+									"value": "FF"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "PUSH",
+									"value": "0"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "DUP1"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "PUSH",
+									"value": "100"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "EXP"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "DUP2"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "SLOAD"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "DUP2"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "PUSH",
+									"value": "FF"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "MUL"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "NOT"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "AND"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "SWAP1"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "DUP4"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "PUSH",
+									"value": "FF"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "AND"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "MUL"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "OR"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "SWAP1"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "SSTORE"
+								},
+								{
+									"begin": 359,
+									"end": 374,
+									"name": "POP"
+								},
+								{
+									"begin": 338,
+									"end": 378,
+									"name": "CALLVALUE"
+								},
+								{
+									"begin": 8,
+									"end": 17,
+									"name": "DUP1"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "ISZERO"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "PUSH [tag]",
+									"value": "1"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "JUMPI"
+								},
+								{
+									"begin": 30,
+									"end": 31,
+									"name": "PUSH",
+									"value": "0"
+								},
+								{
+									"begin": 27,
+									"end": 28,
+									"name": "DUP1"
+								},
+								{
+									"begin": 20,
+									"end": 32,
+									"name": "REVERT"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "tag",
+									"value": "1"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "JUMPDEST"
+								},
+								{
+									"begin": 338,
+									"end": 378,
+									"name": "POP"
+								},
+								{
+									"begin": 338,
+									"end": 378,
+									"name": "PUSH #[$]",
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 338,
+									"end": 378,
+									"name": "DUP1"
+								},
+								{
+									"begin": 338,
+									"end": 378,
+									"name": "PUSH [$]",
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 338,
+									"end": 378,
+									"name": "PUSH",
+									"value": "0"
+								},
+								{
+									"begin": 338,
+									"end": 378,
+									"name": "CODECOPY"
+								},
+								{
+									"begin": 338,
+									"end": 378,
+									"name": "PUSH",
+									"value": "0"
+								},
+								{
+									"begin": 338,
+									"end": 378,
+									"name": "RETURN"
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a165627a7a72305820193f5af391f9f259d629b59b7b15d89ef2b0b8deebb4dedda73c665297a13d0c0029",
+									".code": [
+										{
+											"begin": 338,
+											"end": 378,
+											"name": "PUSH",
+											"value": "80"
+										},
+										{
+											"begin": 338,
+											"end": 378,
+											"name": "PUSH",
+											"value": "40"
+										},
+										{
+											"begin": 338,
+											"end": 378,
+											"name": "MSTORE"
+										},
+										{
+											"begin": 338,
+											"end": 378,
+											"name": "PUSH",
+											"value": "0"
+										},
+										{
+											"begin": 338,
+											"end": 378,
+											"name": "DUP1"
+										},
+										{
+											"begin": 338,
+											"end": 378,
+											"name": "REVERT"
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"8overflowUnderFlow.sol\":\"local\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"8overflowUnderFlow.sol\":{\"keccak256\":\"0x56b9ddb6985561e4ceeb6d99700cfe84259eb0bbeb9b3e59cd530c2c85ad9775\",\"urls\":[\"bzzr://7fb2b8e43bd66df09570e250a7433cfd116f45df9af8323fa1256fe3af14d91f\"]}},\"version\":1}",
+					"userdoc": {
+						"methods": {}
+					}
+				}
+			}
+		},
+		"sources": {
+			"8overflowUnderFlow.sol": {
+				"ast": {
+					"absolutePath": "8overflowUnderFlow.sol",
+					"exportedSymbols": {
+						"local": [
+							5
+						]
+					},
+					"id": 6,
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"0.5",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "37:22:0"
+						},
+						{
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"documentation": null,
+							"fullyImplemented": true,
+							"id": 5,
+							"linearizedBaseContracts": [
+								5
+							],
+							"name": "local",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"constant": false,
+									"id": 4,
+									"name": "money",
+									"nodeType": "VariableDeclaration",
+									"scope": 5,
+									"src": "359:15:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_uint8",
+										"typeString": "uint8"
+									},
+									"typeName": {
+										"id": 2,
+										"name": "uint8",
+										"nodeType": "ElementaryTypeName",
+										"src": "359:5:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_uint8",
+											"typeString": "uint8"
+										}
+									},
+									"value": {
+										"argumentTypes": null,
+										"hexValue": "323535",
+										"id": 3,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "number",
+										"lValueRequested": false,
+										"nodeType": "Literal",
+										"src": "371:3:0",
+										"subdenomination": null,
+										"typeDescriptions": {
+											"typeIdentifier": "t_rational_255_by_1",
+											"typeString": "int_const 255"
+										},
+										"value": "255"
+									},
+									"visibility": "internal"
+								}
+							],
+							"scope": 6,
+							"src": "338:40:0"
+						}
+					],
+					"src": "37:343:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
